@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from honeymilk.neocities.org/kaoru by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Mar 2025 22:43:07 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>The Abysmal Darkness 🌙</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+      <style>
+        @font-face{
+          font-family: 'Rolling Love';
+          src: url(RollingLove.ttf);
+        }
+        h1, h2, h3 {
+          font-family: Rolling Love;
+        }
+        body {
+          background-color: #b0c7cf;
+          background-image: url('kaorubg.jpg');
+          background-size: auto;
+        }
+        html {
+          scrollbar-color: #b9e7f7 #fffadb;
+        }
+        ::-webkit-scrollbar-track {
+          background: #fffadb;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #b9e7f7;
+        }
+        main {
+          background: rgb(255,250,219);
+          background: linear-gradient(180deg, rgba(255,250,219,1) 0%, rgba(244,230,143,1) 98%); 
+        }
+        hr {
+          color: #e2a95f;
+        }
+        #container {
+          border-width: 7px;
+          border-style: solid;
+          border-image: url("images/kaoimages/kaoruborder.gif") 6 fill round;
+        }
+        #container a {
+          color: #a54806;
+        }
+        #container a:hover {
+          color: #601401;
+        }
+        ::selection {
+          background: #f9f4cf;
+        }
+        ul {
+          list-style-image: url('images/kaoimages/heartbullets.gif');
+        }
+      </style>
+      <script type="text/javascript">
+// <![CDATA[
+var speed=33; // lower number for faster
+var drops=50; // number of 'drops'
+var colour="#999"; // colour of drops (generally grey!)
+
+/***************************\
+*   Rainy Afternoon Effect  *
+*(c)2011-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+
+var flks=new Array();
+var flkx=new Array();
+var flky=new Array();
+var fldy=new Array();
+var swide, shigh, boddie;
+var ie_version=(navigator.appVersion.indexOf("MSIE")!=-1)?parseFloat(navigator.appVersion.split("MSIE")[1]):false;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(storm);
+
+function storm() { if (document.getElementById) {
+  var r1, r2;
+  boddie=document.createElement("div");
+  boddie.style.position="fixed";
+  boddie.style.top="0px";
+  boddie.style.left="0px";
+  boddie.style.width="1px";
+  boddie.style.height="1px";
+  boddie.style.overflow="visible";
+  boddie.style.backgroundColor="transparent";
+  document.body.appendChild(boddie);
+  set_width();
+  for (var i=0; i<drops; i++) {
+    flks[i]=createDiv(16, 2, "transparent");
+    r1=createDiv(6, 2, colour);
+    r1.style.top="10px";
+    r1.style.left="0px";
+    flks[i].appendChild(r1);
+    r2=createDiv(10, 2, colour);
+    r2.style.top="0px";
+    r2.style.left="0px";
+    if (ie_version && ie_version<10) r2.style.filter="alpha(opacity=25)";
+    else r2.style.opacity=0.25;
+    flks[i].appendChild(r2);
+    flkx[i]=2*Math.floor(Math.random()*swide/2);
+    flky[i]=Math.floor(Math.random()*shigh);
+    fldy[i]=2+Math.floor(Math.random()*4);
+    flks[i].style.left=flkx[i]+"px";
+    flks[i].style.top=flky[i]+"px";
+    boddie.appendChild(flks[i]);
+  }
+  setInterval("cats_and_dogs()", speed);
+}}
+
+function createDiv(height, width, colour) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    sw_min=document.documentElement.clientWidth;
+    sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min-2;
+  shigh=sh_min;
+}
+
+function cats_and_dogs(c) {
+  var i, x, o=0;
+  for (i=0; i<drops; i++) {
+    flky[i]+=fldy[i];
+    if (flky[i]>=shigh-16) {
+	  flky[i]=-16;
+	  fldy[i]=2+Math.floor(Math.random()*4);
+	  flkx[i]=2*Math.floor(Math.random()*swide/2);
+	  flks[i].style.left=flkx[i]+"px";
+	}
+	flks[i].style.top=flky[i]+"px";
+  }
+}
+// ]]>
+</script>
+  </head>
+  <body>
+
+    <div id="container">
+    
+      <div id="rei1">
+      <img src="images/kaoimages/kaorurender2.webp" style="height: 300px">
+      </div>
+
+      <div id="rei2">
+      <img src="images/kaoimages/kaorurender.webp" style="height: 300px">
+      </div>
+    
+      <div id="flex">
+      
+      <div id="graphic">
+      <img src="images/kaoimages/clouds.gif" style="position: fixed; left: 60px; top: 150px;">
+      <img src="images/kaoimages/clouds.gif" style="position: fixed; right: 60px; top: 80px;">
+      <img src="images/kaoimages/feathers.gif" style="position: absolute; left: 160px; top: 20px;">
+      <img src="images/kaoimages/feathers.gif" style="position: absolute; right: 160px; top: 20px;">
+      </div>
+      
+      <main>
+      <p><a href="shrines.html">← Back</a></p>
+      <center>
+        <a href="https://www.glitter-graphics.com/graphics/347160">
+        </a>
+        <h1>Kaoru Hakaze</h1>
+        <img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif">
+        <h4><i>"We help each other when we need it, give-or-take."</i></h4>
+        <img src="images/kaoimages/kaorucard.webp"  style="width: 100%" alt="A CG of Kaoru, a blonde man in dark clothes, holding a standing mic on-stage.">
+        <p>Kaoru Hakaze is an idol in the unit UNDEAD, alongside Rei, Adonis, and Koga. He's known for his easygoing nature as well as his flirtatious image. Though Kaoru initially became an idol to become popular with girls, and he spent most of his school life shirking work, he has since become reliable and serious. He's been involved in a variety of activities, including ice skating, sports biking, and acting in romantic dramas. He's in the BIBLION (book-reading) and OCEANS (marine biology) circles.</p>
+		    <p>His passion for the ocean comes from his late mother who was a marine biologist. Her death is something that troubles him for a long time, and he has a tendency to become emotional about his family. On the other hand, he doesn't get along with his father and feels guilty for leaving familial duties to his older brother and sister (notably, one arc title in First Dreams 2 refers to him as "A Good-for-Nothing Son"). Even so, he puts in an effort to help out and fulfill his responsibilities.</p>
+		    <p>Being friendly and outgoing, he's able to get along with a large variety of people, including Kanata Shinkai and Chiaki Morisawa.</p>
+          <p>He is voiced by Kei Hosogai and played by Chihiro Okutani in the stage plays.</p>
+        <blockquote>
+          <b>Birthday:</b> November 3rd<br>
+          <b>Age:</b> 18-19<br>
+          <b>Height:</b> 178 cm / 5'10"<br>
+          <b>Blood type:</b> B<br>
+          <b>Specialty:</b> Discerning the scent of girls (I don't know why either I'm sorry)<br>
+          <b>Solo:</b> Feather Heartache<br>
+          <b>Signature:</b><br>
+          <img src="images/kaoimages/kaorusignature.webp" style="width: 30%" alt="Kaoru's signature, his first name in Romaji with a feather shape and a heart."><br>
+        </blockquote>
+        <h2>Facts About Kaoru</h2>
+        <img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif">
+		    </center>
+          <ul>
+            <li>His favorite food is pancakes with ice cream and syrup!</li>
+			      <li>According to official art, he owns at least three surfboards.</li>
+			      <li>As of Bride Light, he knows the acoustic guitar.</li>
+			      <li>He has lifeguard training from part-time jobs.</li>
+			      <li>The Hakaze family is well-off and influential in the area, and they're important enough to know the Tenshouin, Himemiya, and Suou families.</li>
+			      <li>He's read shoujo manga to get closer to girls.</li>
+			      <li><a href="https://youtu.be/KEEiyUf2RWk">His voice actor is fluent in English.</a></li>
+			      <li>From the English Ensemble Stars Wiki, "The word 薫風 (read kunpū or kaorukaze) is a seasonal word used in Japanese poetry associated with early summer. It means 'a gentle wind with the fragrance of new, green leaves.'"</li>
+			      <li>He used to be an honors student before high school.</li>
+          </ul>
+		    <center>
+        <h2>Official Art and Animations</h2>
+        <img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif">
+          <img src="images/kaoimages/kaorucg1.webp"  style="width: 100%" alt="A CG of Kaoru being pushed by someone off-screen and looking surprised.">
+          <img src="images/kaoimages/kaorucg2.webp"  style="width: 100%" alt="Kaoru in his winter outfit, walking down the street and drinking a coffee.">
+          <img src="images/kaoimages/kaorucg3.webp"  style="width: 100%" alt="Kaoru putting his hands together and pleading with a bashful expression.">
+          <img src="../64.media.tumblr.com/c70c35e3598d5317c037636a6f80a4e6/ab4dc7f6831f8fd4-55/s640x960/tumblr_c70c35e3598d5317c037636a6f80a4e6_d19a517e_640.gif" alt="A music video gif of Rei and Kaoru bumping into each other.">
+          <img src="images/kaoimages/kaorufox.jpg"  style="width: 60%" alt="Official art of Kaoru with fox ears, sitting beside a sleeping fox."><br>
+          <img src="images/kaoimages/kaoruchibi.webp"  style="width: 33%" alt="An animation of chibi Kaoru playing a guitar and handing the viewer a bouquet of flowers."><br>
+          <img src="images/kaoimages/kaorucnstars.webp" style="width: 33%" alt="A chibi of Kaoru sticking his tongue out and winking.">
+        <h3>Favorite CG</h3>
+        <img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif">
+        <img src="images/kaoimages/phantomthiefkaoru.webp" style="width: 100%">
+        <p>I don't even know how to describe how much I love this card I'm just really enamoured with it. I love phantom thieves and I love Kaoru and finding out about this image was like Happy Elements decided to personally snipe me<br>
+        Editing this to say I got him in a single 10-pull when Fake Phantom Thieves came to Engstars and couldn't stop bouncing around for like a solid hour afterward</p>
+        <h2>Personal Feelings</h2>
+		    <img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif"><img src="images/kaoimages/bowrosesdivider.gif">
+			  <p>My first real introduction to Kaoru was the Date Plan event story in early !! era. This was before I was interested in Rei or UNDEAD, and I hadn't watched the anime or really read any ! stories yet, so my meeting his character was completely fresh. I wasn't particularly invested in him, but he struck me as an interesting character. The story tells us about Kaoru's insecurities being the leader of a project as well as his shift from being a careless playboy to a more serious idol; he learns a lot from the people around him, and ultimately he is able to help his teammates and lead the project to success. It's a truly honest, earnest story that was really fun to read. Kaoru's struggles with reinventing himself touched my heart, and I think his somber realization that he never <i>really</i> understood girls or honestly tried to relate to them is fitting for his growth as a person.</p>
+			  <p>Going on to read ! stories featuring Kaoru was... rough. I'm not really a fan of the womanizer type of character, and his disregard for work and his unitmates was sort of annoying to witness. Rei makes an effort to reach out to Kaoru out of the desire for an equal work partner, but they never really connect during this era and Rei is left to wonder how exactly he is meant to interact with Kaoru. But I got used to it since they're in the same unit and I wanted to devour all the Rei content I could.</p>
+			  <p>I guess that over time, all this reading made me appreciate the character he is in the current era. The difference is like night and day with him, and I was a little impressed by how much development he went through between years. I think it wasn't until the Whisper of Spring story that I understood his charms as a character; seeing his interactions with Izumi and the others—how dorky and funny and human he could be—was a genuinely enjoyable experience for me. Like, "ah, this is who Kaoru is." It made me want to get to know him better as a character.</p>
+			  <p>...Which is a lot to say that I ended up wholeheartedly loving him and being a really big fan of him. I wouldn't say that I feel about him the same way I do about Rei, but that doesn't make him lesser either. On the contrary, Kaoru is a wonderful character with a lot of heart and emotion that deserves to be appreciated for all his good qualities. I like the way he cries easily when it comes to his family and the way he tries so hard to be cool around his crush but is really best when he's having fun and being himself with his friends. I feel for him a lot when he struggles to cope with family expectations and loss, even to the point of seeking affection from strangers. Basically I think he's really cool and I love him :]</p>
+			  <img src="images/kaoimages/kaoruwd.webp" style="width: 50%" alt="Kaoru holding an envelope while grinning and blushing. There is overlaid text that reads, Happy White Day 2016.03.14.">
+		    </center>
+		    </main>
+		    </div>
+    </div>
+
+  </body>
+
+<!-- Mirrored from honeymilk.neocities.org/kaoru by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Mar 2025 22:43:14 GMT -->
+</html>

@@ -1,0 +1,383 @@
+@font-face {
+  font-family: basiic;
+  src: url(basiic.ttf);
+}
+
+@font-face {
+  font-family: RomanceA;
+  src: url(RomanceA.ttf);
+}
+
+@font-face {
+  font-family: Magica;
+  src: url(Magica.ttf);
+}
+
+body {
+  font-family: 'basiic';
+  font-size: 18px;
+  margin: 0;
+  background-color: #ffefe7;
+    /* you can delete the line below if you'd prefer to not use an image */
+  background-size: 65px;
+  color: #633b07;
+  background-image: url('bg.gif');
+  cursor: url('bowcursor.png'), default;
+  scrollbar-width: thin;
+}
+
+html {
+  scrollbar-color: #fcbfbf #ffeee8;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffeee8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fcbfbf;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Magica';
+}
+
+#header {
+  max-width: 800px;
+  width: 100%;
+  background-color: #08031A;
+    /* header color here! */
+  height: 150px;
+    /* this is only for a background image! */
+    /* if you want to put images IN the header, 
+  you can add them directly to the <div id="header"></div> element! */
+  background-image: url('header.png');
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+    /* the "container" is what wraps your entire website */
+    /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+#container {
+  max-width: 800px;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+    and change the media query according to the comment! */
+  margin: 0 auto;
+    /* this centers the entire page */
+/*  left: -50px; */
+  position: relative;
+}
+
+    /* the area below is for all links on your page
+    EXCEPT for the navigation */
+#container a {
+color: #c12636;
+font-weight: bold;
+    /* if you want to remove the underline
+    you can add a line below here that says:
+    text-decoration:none; */
+text-decoration: none;
+}
+
+#container a:hover {
+  color: #5b010a;
+  text-decoration: none;
+  cursor: url('pinkselect.ico'), default;
+}
+
+    /* navigation section!! */
+#navbar {
+  height: 30px;
+  background-color: #bf7c26;
+    /* navbar color */
+  width: 100%;
+}
+
+#navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+    /* navigation links*/
+#navbar li a {
+  display: block;
+  color: #fcedba;
+    /* navbar text color */
+  font-weight: 800;
+  text-decoration: none;
+    /* this removes the underline */
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
+    /* navigation link when a link is hovered over */
+#navbar li a:hover {
+  color: #fcf3d6;
+  text-decoration: none;
+  background-color: #9e5d09;
+  cursor: url('pinkselect.ico'), default;
+}
+
+#navbar ::selection {
+  background: #633b07;
+}
+
+#flex {
+  display: flex;
+}
+
+#menu {
+  position: absolute;
+  top: 10px;
+  right: -210px;
+  width: 200px;
+  height: 300px;
+  text-align: left;
+  order: 4;
+  border-width: 8px;
+  border-style: solid;
+  border-image: url("images/menuborder.png") 7 fill round;
+}
+
+#menu h3 {
+  font-family: 'RomanceA';
+  margin: 8px;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0px 5px;
+  margin: 6px;
+}
+
+#menu li a {
+ color: #c12636;
+ -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#menu li a:hover {
+  color: #c12636;
+  filter: none;
+}
+
+#feature {
+  position: absolute;
+  top: 100px;
+  left: -210px;
+  width: 200px;
+  height: 200px;
+  background-color: #fcbfbf;
+  box-shadow: 0 4px 8px 0 rgba(99, 59, 7, 0.2), 0 6px 20px 0 rgba(99, 59, 7, 0.19);
+  border: 3px solid white;
+  padding: 3px;
+  background-image: url('featureimage.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+    /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+aside {
+  background-color: #e6a847;
+  width: 200px;
+  padding: 20px;
+}
+
+    /* this is the color of the main content area,
+    between the sidebars! */
+main {
+  background-color: #ffcc58;
+  flex: 1;
+  padding: 20px;
+  order: 2;
+}
+
+    /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+  order: 1;
+}
+
+#rightSidebar {
+  order: 3;
+}
+
+footer {
+  background-color: #ffd87e;
+    /* background color for footer */
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+    /* this centers the footer text */
+}
+
+strong {
+    /* this styles bold text */
+  color: #ED64F5;
+}
+
+    /* this is just a cool box, it's the darker colored one */
+.box {
+  background-color: #fcbfbf;
+  border: 2px dashed white;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* CSS for extras */
+
+#topBar {
+  width: 100%;
+  height: 20px;
+  font-size: smaller;
+  background-color: #ffd87e;
+}
+
+/* #sitemap {
+  display: none;
+}
+*/
+
+      /* BELOW THIS POINT IS MEDIA QUERY */
+
+    /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+@media only screen and (max-width: 700px) {
+
+/*  #navbar ul {
+    display: none;
+  }
+  
+  #sitemap {
+    display: block;
+    color: #ffe9a2;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px 10px 10px;
+  }
+
+  #sitemap a:hover {
+    color: #fcf3d6;
+    text-decoration: none;
+    background-color: #9e5d09;
+    cursor: url('pinkselect.ico'), default;
+  }
+*/
+  #graphic {
+    display: none;
+  }
+  
+  #flex {
+    flex-wrap: wrap;
+  }
+
+  #header {
+    background-position: center;
+  }
+
+  #body {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+    /* the order of the items is adjusted here for responsiveness!
+    since the sidebars would be too small on a mobile device.
+    feel free to play around with the order!
+    */
+  main {
+    order: 1;
+  }
+
+  #leftSidebar {
+    order: 2;
+  }
+
+  #rightSidebar {
+    order: 3;
+  }
+
+  #navbar ul {
+    flex-wrap: wrap;
+    }
+  }
+
+::selection {
+    background: #ffe9a2;
+}
+
+hr {
+  border: none;
+  border-top: solid;
+  border-width: 3px;
+  color: #d5913a;
+  background-color: #d5913a;
+}
+
+#rei1 {
+  position: fixed;
+  bottom: -5px;
+  left: 0;
+  z-index: -1;
+  opacity: .9;
+}
+
+#rei2 {
+  position: fixed;
+  bottom: -5px;
+  right: 0;
+  z-index: -2;
+  opacity: .9;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+#detailbox {
+  background-color: #ffd87e;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+#detailbox ul {
+ list-style: none; 
+}
+
+#menuframe {
+  position: absolute;
+  top: 10px;
+  right: -210px;
+  width: 200px;
+  height: 320px;
+  text-align: left;
+  order: 4;
+  border-width: 8px;
+  border-style: solid;
+  border-image: url("https://imgur.com/J4IhM3e") 7 fill round;
+}

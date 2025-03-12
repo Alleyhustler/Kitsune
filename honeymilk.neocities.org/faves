@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from honeymilk.neocities.org/faves by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Mar 2025 22:43:41 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+      <title>The Abysmal Darkness 🌙</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+      <style>
+        @media only screen and (max-width: 800px) {
+          img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+        @font-face {
+          font-family: Magica;
+          src: url(Magica.ttf);
+        }
+        body {
+          font-family: 'Magica';
+          background-image: url('favesbg.gif');
+          background-size: auto;
+          color: #440209;
+        }
+        #container {
+          left: -200px;
+          padding: 10px;
+        }
+        main {
+          background-color: #F5B2B2;
+          border: 3px solid white;
+          border-radius: 30px;
+          height: 600px;
+          margin: 5px;
+          overflow: auto;
+        }
+        ::selection {
+          background: #fcd6dc;
+        }
+        #container a {
+          color: #b51020;
+        }
+        #desc {
+          background-color: white;
+          border: 3px solid white;
+          border-radius: 20px;
+          padding: 5px;
+          margin: 5px;
+        }
+        #carousel {
+          position: absolute;
+          right: -400px;
+          background-color: #F5B2B2;
+          border: 3px solid white;
+          border-radius: 30px;
+          width: 400px;
+          height: 600px;
+          padding: 10px;
+        }
+      </style>
+  </head>
+  <body>
+  
+    <div id="container">
+    
+      <div id="carousel">
+      <marquee behavior="alternate" width="100%" direction="down" height="100%" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="5">
+        <img src="images/ayacg2.webp" style="width: 100%">
+        <img src="images/ritsucg2.webp" style="width: 100%">
+        <img src="images/soracg2.webp" style="width: 100%">
+        <img src="images/hajimecg2.webp" style="width: 100%">
+        <img src="images/toricg2.webp" style="width: 100%">
+        <img src="images/ayacg.webp" style="width: 100%">
+        <img src="images/ritsucg.webp" style="width: 100%">
+        <img src="images/soracg.webp" style="width: 100%">
+        <img src="images/hajimecg.webp" style="width: 100%">
+        <img src="images/nazunacg.webp" style="width: 100%">
+      </marquee>
+      </div>
+
+      <div id="flex">
+      <main>
+      <p><a href="shrines.html">← Back</a></p>
+      <center>
+        <h1>Favorite Characters</h1>
+        <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+        <p>Here are some other characters I'm a fan of. (I don't selfship with these, they're just neat!)</p>
+        <h2>Ensemble Stars!!</h2>
+        <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3>Tori Himemiya</h3>
+            <img src="images/tori.png" style="height: 200px">
+            <div id="desc">
+              <p>A cute but spoiled idol in the unit <i>fine.</i> Oldest son of the rich Himemiya family. Tori has been known for his devilishness and childish habits, but he's grown a lot over the course of the series. He's proud of his cuteness and charm, and he is always looking to grow and keep up with his older peers. Wants to be a great idol like his hero, Eichi.</p>
+            </div>
+              <blockquote>
+                <b>Birthday:</b> January 13th<br>
+                <b>Solo:</b> Little Little Prince Star
+              </blockquote>
+              <img src="images/torisignature.webp" style="width: 30%">
+              <img src="images/toricard.webp"  style="width: 100%" alt="A CG of Tori waving excitedly.">
+          <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3><i>fine</i></h3>
+            <img src="images/fine.png" style="height: 200px">
+            <div id="desc">
+              <p>A unit belonging to Starmaker Production. One of the top idol units in the industry, they are known for elegant and high-quality performances. My favorite songs from them include RAINBOW CIRCUS and Never Ending Symphonia.</p>
+              <p>✧ Eichi Tenshouin: The cunning, serene leader of <i>fine</i> and an executive at Ensemble Square.</p>
+              <p>✧ Wataru Hibiki: An ebullient actor and magician who is full of love and tricks.</p>
+              <p>✧ Yuzuru Fushimi: Tori's devoted butler who has dark secrets of his own.</p>
+            </div>
+          <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3>Nazuna Nito</h3>
+            <img src="images/nazuna.png" style="height: 200px">
+            <div id="desc">
+              <p>Ra*bits' previous leader, Nazuna is an honest and reliable big brother to everyone. He's currently studying at a university while being an idol, and he has a speech impediment when nervous. He has dealt with self-esteem and image issues, but he persevered and continues to grow as a person today. I love his will to improve himself and how much he wants to nurture and protect his younger friends.</p>
+            </div>
+              <blockquote>
+                <b>Birthday:</b> April 27th<br>
+                <b>Solo:</b> Niichan Ouen Dan☆ / Ni~Chan Cheer Squad☆
+              </blockquote>
+              <img src="images/nazunasignature.webp" style="width: 30%"><br>
+              <img src="images/nazunabunny.jpg" style="width: 40%"><br>
+              <img src="images/nazunadialogue.jpg" style="width: 75%" alt="A dialogue screenshot with Nazuna saying: Rabbits and good kids have their own survival strategies. We've always been good kids, so we deserve to be rewarded once in a while.">
+              <img src="images/nazunacard.webp"  style="width: 100%" alt="A CG of Nazuna hugging and comforting a crying Tomoya.">
+          <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3>Ra*bits</h3>
+            <img src="images/rabits.png" style="height: 200px">
+            <div id="desc">
+              <p>A unit belonging to Rhythm Link. They're energetic and lovable, and their performances are full of cheer. Cuteness is their main appeal, but they take their work seriously. My favorite songs from them include JoyfulxBox and Hamutaro Tottokouta.</p>
+              <p>✿ Tomoya Mashiro: The earnest and average current leader of Ra*bits who has a passion for acting.</p>
+              <p>✿ Hajime Shino: A shy, kind boy who loves tea and satchets.</p>
+              <p>✿ Mitsuru Tenma: A bread-loving athlete who never stays still.</p>
+            </div>
+          <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3>Ritsu Sakuma</h3>
+            <img src="images/ritsu.png" style="height: 200px">
+            <div id="desc">
+              <p>An idol in Knights who is clever and sensitive but perpetually sleepy. He loves naps and can play the piano. He has a contentious relationship with his older brother and seeks to be recognized for his own merits in idol work and acting. I like him for his quiet and playful nature, and he reminds me of a cute little cat. Also he's my brother-in-law!</p>
+            </div>
+              <blockquote>
+              <b>Birthday:</b> September 22nd<br>
+              <b>Solo:</b> Mayonaka no Nocturne / Midnight Nocturne
+          </blockquote>
+          <img src="images/ritsusignature.webp" style="width: 30%">
+          <img src="images/ritsucard.webp"  style="width: 100%" alt="A CG of Ritsu in a regal outfit with cat ears and a tail.">
+          <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3>Sora Harukawa</h3>
+            <img src="images/sora.png" style="height: 200px">
+            <div id="desc">
+              <p>Sora is an idol in Switch with a unique perspective on the world around him due to his synesthesia. Due to this, he is easily overwhelmed and set apart from others, and he's always learning about how to exist with people while staying true to himself. He loves video games, and he is learning magic from his mentor Natsume Sakasaki. He endears me through his characteristic laughter and the way he experiences life so differently from other people.</p>
+            </div>
+              <blockquote>
+                <b>Birthday:</b> July 1st<br>
+                <b>Solo:</b> VIVID ROLE-PLAYING
+              </blockquote>
+              <img src="images/sorasignature.webp" style="width: 30%">
+              <img src="images/soracard.webp"  style="width: 100%" alt="A CG of Sora leaning on a desk and gazing at a green, glowing flask.">
+        <h2>BanG Dream!</h2>
+          <img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%"><img src="images/pinkdivider.gif" style="width: 33%">
+          <h3>Aya Maruyama</h3>
+          <img src="images/aya.png" style="height: 200px">
+          <div id="desc">
+            <p>Everyone's fluffy pink cutie and the leader of Pastel*Palettes. While clumsy at times, she always works hard and tries her best to be the greatest idol she can be. She's an aspirational character to me because even though she cries easily, and she's not a natural at what she does, she works to make her dream come true and to bring smiles to everyone through her performances. Some of my favorite Pastel*Palettes songs are Shuwarin☆Drea~min and their cover of MOON PRIDE.</p>
+          </div>
+            <blockquote>
+              <b>Birthday:</b> December 27th<br>
+            </blockquote>
+            <img src="images/ayasignature.png" style="width: 30%">
+            <img src="images/ayacard.webp"  style="width: 100%" alt="A CG of Aya tearfully holding hands with her idol.">
+      </center>
+      </main>
+      </div>
+    </div>
+
+  </body>
+
+<!-- Mirrored from honeymilk.neocities.org/faves by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Mar 2025 22:43:52 GMT -->
+</html>

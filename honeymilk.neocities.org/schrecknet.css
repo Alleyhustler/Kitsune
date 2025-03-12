@@ -1,0 +1,69 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (è’œ) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+@font-face {
+  font-family: XFiles;
+  src: url('xfiles.ttf');
+}
+
+#schrecknet {
+  font-family: 'XFiles';
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 15px; /* creates some space around the widget */
+  color: #fff; /* should make the text color white unless i'm crazy */
+}
+
+#schrecknet a {
+  color: #00FF00;
+  text-decoration: none;
+}
+
+#schrecknet a:hover{
+  color: #FFF;
+  text-decoration: none;
+}
+
+#schrecknet table {
+  background-color: #000; /* makes the background pure BLACK (more goffik) */
+  margin: 0 auto; /* centers the widget */
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFF;
+  background-image: url('../vonfriedhof.neocities.org/schrecknet/style/num2.gif');
+  font-size: 15px;
+}
+
+#schrecknet table tr td {
+  padding: 10px; /* creates some space between the links and text inside the widget */
+}
+
+#schrecknet .webring-prev {
+  text-align:right;
+}
+
+#schrecknet .webring-info {
+   text-align:center;
+}
+
+#schrecknet .webring-next {
+  text-align:left;
+}
+
+#schrecknet .webring-links {
+  font-size:small;
+}
+
+#schrecknet clan {
+  width: 30px;
+  height: 30px;
+  background-image: url('../vonfriedhof.neocities.org/schrecknet/ring/img/ventrue.png');
+  color: #000;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+}
